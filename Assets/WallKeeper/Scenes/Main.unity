@@ -437,8 +437,8 @@ MonoBehaviour:
   rightKinect: {fileID: 2052928800}
   setting:
     isLeft: 0
-  leftCam: {fileID: 0}
-  rightCam: {fileID: 0}
+  leftCam: {fileID: 1654043412}
+  rightCam: {fileID: 1805697821}
 --- !u!4 &160231220
 Transform:
   m_ObjectHideFlags: 0
