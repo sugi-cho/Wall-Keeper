@@ -13,7 +13,7 @@ public class KinectController : MonoBehaviour
 
     CameraSpacePoint[] cameraSpacePoints;
     Body[] bodyData;
-    JointType[] KeyJoints = new[] { JointType.HandLeft, JointType.HandRight, JointType.Head };
+    public static JointType[] KeyJoints = new[] { JointType.HandLeft, JointType.HandRight, JointType.Head };
 
     int depthDataLength;
 
@@ -63,7 +63,8 @@ public class KinectController : MonoBehaviour
 
             kinectCS.SetVector("_ResetRot", new UnityEngine.Vector4(0, 0, 0, 1));
         }
-        
+
+        controllData.trackedIds = Enumerable.Repeat((ulong)0, 6).ToArray();
         controllData.atackPoints = Enumerable.Repeat(Vector3.zero, 3 * 6).ToArray();
         controllData.floorClipPlane = UnityEngine.Vector4.zero;
     }
@@ -111,6 +112,7 @@ public class KinectController : MonoBehaviour
                     {
                         var body = bodyData[i];
                         var shoulderHeight = body.Joints[JointType.SpineShoulder].Position.Y;
+                        controllData.trackedIds[i] = body.IsTracked ? body.TrackingId : 0;
                         for (var j = 0; j < 3; j++)
                         {
                             var key = KeyJoints[j];
@@ -207,6 +209,7 @@ public class KinectController : MonoBehaviour
         public ushort[] depthData;
         public byte[] bodyIndexData;
         public UnityEngine.Vector4 floorClipPlane;
+        public ulong[] trackedIds;
         public Vector3[] atackPoints;
     }
 
