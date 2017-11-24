@@ -1,0 +1,27 @@
+﻿#pragma kernel buildVertex
+
+#include "Quaternion.cginc"
+
+StructuredBuffer<float3> _CameraSpacePointData;
+RWStructuredBuffer<float3> _VertexDataBuffer;
+
+float4 _ResetRot;
+float _KinectHeight;
+float _Scale;
+float3 _Offset;
+bool _NoMirror;
+
+[numthreads(8, 1, 1)]
+void buildVertex(uint3 id : SV_DispatchThreadID)
+{
+    uint idx = id.x;
+    float3 pos = _CameraSpacePointData[idx];
+    pos = rotateWithQuaternion(pos, _ResetRot);
+    pos.y += _KinectHeight;
+    if (_NoMirror)
+        pos.x *= -1;
+    pos *= _Scale;
+    pos += _Offset;
+
+    _VertexDataBuffer[idx] = pos;
+}
