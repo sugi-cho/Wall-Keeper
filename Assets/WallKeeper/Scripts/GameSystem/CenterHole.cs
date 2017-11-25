@@ -2,7 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using sugi.cc;
+
 public class CenterHole : MonoBehaviour {
+
+    [Osc("/ball")]
+    void EmitBall()
+    {
+
+    }
 
 	// Use this for initialization
 	void Start () {

@@ -33,8 +33,8 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
         }
     }
 
-    [Osc("/Title")]
-    public void ShowTitle()
+    [Osc("/title")]
+    public void ShowTitle(object[] data = null)
     {
         video.Play();
         AudioController.Instance.PlayBGM();
@@ -57,8 +57,8 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
         fader.color = faderTo;
     }
 
-    [Osc("/Game")]
-    public void StartGame()
+    [Osc("/game")]
+    public void StartGame(object[] data = null)
     {
         StartCoroutine(FadeVideoRoutine(0, 1f));
         gameController.StartGame();
@@ -74,6 +74,20 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+            SendTitleOsc();
+        if (Input.GetKeyDown(KeyCode.G))
+            SendGameOsc();
+    }
 
+    void SendTitleOsc()
+    {
+        var osc = new MessageEncoder("/title");
+        OscController.Instance.Send(osc);
+    }
+    void SendGameOsc()
+    {
+        var osc = new MessageEncoder("/game");
+        OscController.Instance.Send(osc);
     }
 }
