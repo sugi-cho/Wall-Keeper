@@ -8,6 +8,8 @@ using sugi.cc;
 
 public class KinectController : MonoBehaviour
 {
+    GameController gameController { get { return GameController.Instance; } }
+
     KinectSensor kinect;
     MultiSourceFrameReader reader;
 
@@ -25,10 +27,8 @@ public class KinectController : MonoBehaviour
     ComputeBuffer vertexBuffer;
 
     public Material meshVisalizer;
-    public int downsample = 0;
+    public AtackPointController atackController;
 
-    [Header("send kinect data to remote")]
-    public RemoteData remote;
     public Setting setting;
 
     ControlData controllData;
@@ -64,7 +64,7 @@ public class KinectController : MonoBehaviour
             kinectCS.SetVector("_ResetRot", new UnityEngine.Vector4(0, 0, 0, 1));
         }
 
-        controllData.trackedIds = Enumerable.Repeat((ulong)0, 6).ToArray();
+        controllData.trackedIds = Enumerable.Repeat((ulong)0, 3 * 6).ToArray();
         controllData.atackPoints = Enumerable.Repeat(Vector3.zero, 3 * 6).ToArray();
         controllData.floorClipPlane = UnityEngine.Vector4.zero;
     }
@@ -81,7 +81,7 @@ public class KinectController : MonoBehaviour
 
     void Update()
     {
-        if (reader != null)
+        if (reader != null && gameController.started)
         {
             var dataUpdated = false;
             var frame = reader.AcquireLatestFrame();
@@ -112,7 +112,6 @@ public class KinectController : MonoBehaviour
                     {
                         var body = bodyData[i];
                         var shoulderHeight = body.Joints[JointType.SpineShoulder].Position.Y;
-                        controllData.trackedIds[i] = body.IsTracked ? body.TrackingId : 0;
                         for (var j = 0; j < 3; j++)
                         {
                             var key = KeyJoints[j];
@@ -122,12 +121,14 @@ public class KinectController : MonoBehaviour
                                 controllData.atackPoints[i * 3 + j].x = joint.Position.X;
                                 controllData.atackPoints[i * 3 + j].y = joint.Position.Y;
                                 controllData.atackPoints[i * 3 + j].z = joint.Position.Z;
+                                controllData.trackedIds[i * 3 + j] = body.TrackingId + (ulong)j;
                             }
                             else
                             {
                                 controllData.atackPoints[i * 3 + j].x = 0;
                                 controllData.atackPoints[i * 3 + j].y = 0;
                                 controllData.atackPoints[i * 3 + j].z = 0;
+                                controllData.trackedIds[i * 3 + j] = 0;
                             }
                         }
                     }
@@ -169,6 +170,7 @@ public class KinectController : MonoBehaviour
                 controllData.atackPoints[i] *= setting.kinectScale;
                 controllData.atackPoints[i] += setting.kinectOffset;
             }
+        atackController.SetAtackPoint(controllData.trackedIds, controllData.atackPoints);
         atackPointBuffer.SetData(controllData.atackPoints);
 
         bodyIndexTex.LoadRawTextureData(controllData.bodyIndexData);

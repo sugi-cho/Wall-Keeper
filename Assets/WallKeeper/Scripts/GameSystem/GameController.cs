@@ -17,6 +17,15 @@ public class GameController : SingletonMonoBehaviour<GameController> {
     public KinectController gameKinect { get; private set; }
     public Camera gameCam { get; private set; }
 
+    public Transform ballContainer;
+    public Plane gamePlane { get; private set; }
+    public bool started { get; private set; }
+
+    public void StartGame()
+    {
+        started = true;
+    }
+
     private void Awake()
     {
         SettingManager.AddSettingMenu(setting, "GameSetting.json");
@@ -36,6 +45,7 @@ public class GameController : SingletonMonoBehaviour<GameController> {
             gameKinect = rightKinect.GetComponent<KinectController>();
             gameCam = rightCam;
         }
+        gamePlane = new Plane(Vector3.up, ballContainer.position);
     }
 
     // Use this for initialization
