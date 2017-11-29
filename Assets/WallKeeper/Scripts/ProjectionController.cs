@@ -18,7 +18,9 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
     public Image faderR;
     public VideoPlayer videoL;
     public VideoPlayer videoR;
-    Image fader { get
+    Image fader
+    {
+        get
         {
             if (isLeft) return faderL;
             else return faderR;
@@ -40,7 +42,7 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
         AudioController.Instance.PlayBGM();
         StartCoroutine(FadeVideoRoutine(1f, 1f));
     }
-    IEnumerator FadeVideoRoutine(float to, float duration)
+    IEnumerator FadeVideoRoutine(float to, float duration, System.Action callback = null)
     {
         var t = 0f;
         var videoFrom = video.targetCameraAlpha;
@@ -55,13 +57,23 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
         }
         video.targetCameraAlpha = to;
         fader.color = faderTo;
+        if (callback != null)
+            callback.Invoke();
     }
 
     [Osc("/game")]
     public void StartGame(object[] data = null)
     {
-        StartCoroutine(FadeVideoRoutine(0, 1f));
+        StartCoroutine(FadeVideoRoutine(0, 1f, () => video.gameObject.SetActive(false)));
         gameController.StartGame();
+    }
+
+    [Osc("/end")]
+    public void EndGame(object[] data = null)
+    {
+        ResultController.Instance.ShowResult();
+        foreach (var b in FindObjectsOfType<Ball>())
+            b.gameObject.SetActive(false);
     }
 
     // Use this for initialization
@@ -78,6 +90,8 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
             SendTitleOsc();
         if (Input.GetKeyDown(KeyCode.G))
             SendGameOsc();
+        if (Input.GetKeyDown(KeyCode.B))
+            SendEndOSC();
     }
 
     void SendTitleOsc()
@@ -88,6 +102,11 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
     void SendGameOsc()
     {
         var osc = new MessageEncoder("/game");
+        OscController.Instance.Send(osc);
+    }
+    void SendEndOSC()
+    {
+        var osc = new MessageEncoder("/end");
         OscController.Instance.Send(osc);
     }
 }

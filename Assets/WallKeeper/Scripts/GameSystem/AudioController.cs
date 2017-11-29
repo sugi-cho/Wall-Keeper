@@ -4,7 +4,8 @@ using UnityEngine;
 
 using sugi.cc;
 
-public class AudioController : SingletonMonoBehaviour<AudioController> {
+public class AudioController : SingletonMonoBehaviour<AudioController>
+{
 
     public AudioClip bgm;
 
@@ -16,27 +17,32 @@ public class AudioController : SingletonMonoBehaviour<AudioController> {
 
     public void OnBodyHit()
     {
-        AudioSource.PlayClipAtPoint(bodyHit, Vector3.zero);
+        if (bodyHit != null)
+            AudioSource.PlayClipAtPoint(bodyHit, Vector3.zero);
     }
     public void OnWallHit()
     {
-        AudioSource.PlayClipAtPoint(wallHit, Vector3.zero);
+        if (wallHit != null)
+            AudioSource.PlayClipAtPoint(wallHit, Vector3.zero);
     }
     public void OnWallBreak()
     {
-        AudioSource.PlayClipAtPoint(wallBreak, Vector3.zero);
+        if (wallBreak != null)
+            AudioSource.PlayClipAtPoint(wallBreak, Vector3.zero);
     }
 
     public void PlayBGM()
     {
-        bgmSource.Play();
+        if (bgm != null)
+            bgmSource.Play();
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         bgmSource = gameObject.AddComponent<AudioSource>();
         bgmSource.playOnAwake = false;
         bgmSource.clip = bgm;
-	}
-	
+    }
+
 }

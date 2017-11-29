@@ -33,9 +33,12 @@ public class AtackPointController : MonoBehaviour
                 atackPoint = atackPoints.Where(ap => ap.trackingId == trackingId).FirstOrDefault();
             if (atackPoint == null)
             {
-                atackPoint = untrackedPoints.ElementAt(count++);
-                trackingIdList.Add(trackingId);
-                atackPoint.trackingId = trackingId;
+                if (count < untrackedPoints.Count())
+                {
+                    atackPoint = untrackedPoints.ElementAt(count++);
+                    trackingIdList.Add(trackingId);
+                    atackPoint.trackingId = trackingId;
+                }
             }
             if (atackPoint != null)
                 atackPoint.SetPos(pos);
