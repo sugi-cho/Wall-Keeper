@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Windows.Kinect;
+using sugi.cc;
 
-public class AtackPoint : MonoBehaviour
+public class AtackPoint : RendererBehaviour
 {
     GameController controller { get { return GameController.Instance; } }
 
@@ -29,7 +30,6 @@ public class AtackPoint : MonoBehaviour
         var ray = new Ray(controller.gameCam.transform.position, pos - controller.gameCam.transform.position);
         float enter;
         if (controller.gamePlane.Raycast(ray, out enter))
-            //rigidbody.MovePosition(ray.GetPoint(enter));
             rigidbody.position = ray.GetPoint(enter);
     }
 
@@ -37,11 +37,13 @@ public class AtackPoint : MonoBehaviour
     {
         isTracked = false;
         collider.enabled = false;
+        renderer.enabled = false;
     }
     void SetTracked()
     {
         isTracked = true;
         collider.enabled = true;
+        renderer.enabled = true;
     }
 
     private void Start()

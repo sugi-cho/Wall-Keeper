@@ -9,15 +9,18 @@ using Osc;
 
 public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
 {
+    public static Color MyColor { get { return isLeft ? Instance.colorL : Instance.colorR; } }
+    static bool isLeft { get { return GameController.Instance.setting.isLeft; } }
 
     GameController gameController { get { return GameController.Instance; } }
     OscController oscController { get { return OscController.Instance; } }
-    bool isLeft { get { return GameController.Instance.setting.isLeft; } }
 
     public Image faderL;
     public Image faderR;
     public VideoPlayer videoL;
     public VideoPlayer videoR;
+    public Color colorL = Color.blue;
+    public Color colorR = Color.red;
     Image fader
     {
         get
@@ -35,12 +38,19 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
         }
     }
 
-    [Osc("/title")]
+    bool started;
+
+    [Osc("/start")]
     public void ShowTitle(object[] data = null)
     {
+        if (started)
+            return;
+
         video.Play();
         AudioController.Instance.PlayBGM();
         StartCoroutine(FadeVideoRoutine(1f, 1f));
+        this.Invoke(StartGame, 9f);
+        started = true;
     }
     IEnumerator FadeVideoRoutine(float to, float duration, System.Action callback = null)
     {
@@ -60,53 +70,52 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
         if (callback != null)
             callback.Invoke();
     }
-
-    [Osc("/game")]
-    public void StartGame(object[] data = null)
+    
+    void StartGame()
     {
         StartCoroutine(FadeVideoRoutine(0, 1f, () => video.gameObject.SetActive(false)));
         gameController.StartGame();
     }
 
-    [Osc("/end")]
-    public void EndGame(object[] data = null)
+    [Osc("/setScore")]
+    public void SetScore(object[] data)
     {
-        ResultController.Instance.ShowResult();
-        foreach (var b in FindObjectsOfType<Ball>())
-            b.gameObject.SetActive(false);
+        var stageIdx = (int)data[0];
+        var score = (int)data[1];
+        gameController.SetScore(false, stageIdx, score);
+    }
+    [Osc("/transfer")]
+    public void TransferBall(object[] data)
+    {
+        var pos = new Vector3((float)data[0], (float)data[1], (float)data[2]);
+        var vel = new Vector3((float)data[3], (float)data[4], (float)data[5]);
+        var hitCount = (int)data[6];
+        var isLeft = (int)data[7] == 1;
+        BallController.Instance.TransferBall(pos, vel, hitCount, isLeft);
     }
 
     // Use this for initialization
     void Start()
     {
         video.targetCameraAlpha = 0f;
+        video.Play();
+        video.Pause();
         oscController.AddCallbacks(this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-            SendTitleOsc();
-        if (Input.GetKeyDown(KeyCode.G))
-            SendGameOsc();
-        if (Input.GetKeyDown(KeyCode.B))
-            SendEndOSC();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ShowTitle();
+            SendStartOsc();
+        }
     }
 
-    void SendTitleOsc()
+    void SendStartOsc()
     {
-        var osc = new MessageEncoder("/title");
-        OscController.Instance.Send(osc);
-    }
-    void SendGameOsc()
-    {
-        var osc = new MessageEncoder("/game");
-        OscController.Instance.Send(osc);
-    }
-    void SendEndOSC()
-    {
-        var osc = new MessageEncoder("/end");
+        var osc = new MessageEncoder("/start");
         OscController.Instance.Send(osc);
     }
 }

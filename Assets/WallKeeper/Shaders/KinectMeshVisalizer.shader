@@ -1,6 +1,7 @@
 ﻿Shader "Unlit/KinectMeshVisalizer"
 {
 	Properties{
+		_Color ("color", Color) = (1,1,1,1)
 		_EdgeThreshold ("edge max length", Range(0.01, 1.0)) = 0.2
 		_WireWidth ("wireframe width", Range(0.0,2.0)) = 1.0
 		_Tilt ("tilt z-direction", Float) = 0
@@ -25,6 +26,7 @@
 	float _EdgeThreshold;
 	float _WireWidth;
 	float _Tilt;
+	half4 _Color;
 	
 	v2f getVertexOut(uint idx) {
 		float3 pos = _VertexData[idx];
@@ -79,7 +81,7 @@
 		fixed bodyIdx = tex2D(_BodyIdxTex, depthUV).r;
 
 		if (bodyIdx == 1) discard;
-		half4 col = 1;
+		half4 col = lerp(0, _Color, i.wPos.y+2);
 		for (int idx = 0; idx < 3 * 6; idx++) {
 			half3 diff = i.wPos - _AtackPoints[idx];
 			half d = dot(diff, diff);

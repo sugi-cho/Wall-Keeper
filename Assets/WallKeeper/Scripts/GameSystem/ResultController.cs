@@ -10,10 +10,15 @@ public class ResultController : SingletonMonoBehaviour<ResultController>
     GameController gameController { get { return GameController.Instance; } }
     bool isLeft { get { return gameController.setting.isLeft; } }
 
-    public GameObject result;
+    public GameObject winObj;
+    public GameObject loseObj;
     public Transform resultCamPosL;
     public Transform resultCamPosR;
+    public Transform resultObjPosL;
+    public Transform resultObjPosR;
     public float cameraMoveDuration = 4f;
+
+    Renderer[] renderers;
 
     Transform resultCamPos
     {
@@ -24,10 +29,17 @@ public class ResultController : SingletonMonoBehaviour<ResultController>
         }
     }
 
-    public void ShowResult()
+    public void ShowResult(bool win)
     {
+        var obj = win ? winObj : loseObj;
+        var pos = TextPositionSetter.CenterPos;
         StartCoroutine(MoveCamPosRoutine(
-            () => result.SetActive(true)
+            () =>
+            {
+                obj.transform.position = pos;
+                foreach (var r in obj.GetComponentsInChildren<Renderer>())
+                    r.enabled = true;
+            }
             ));
     }
 
@@ -40,7 +52,7 @@ public class ResultController : SingletonMonoBehaviour<ResultController>
         var toRot = resultCamPos.transform.rotation;
 
         var t = 0f;
-        while(t < 1f)
+        while (t < 1f)
         {
             cam.transform.position = Vector3.Lerp(fromPos, toPos, t);
             cam.transform.rotation = Quaternion.Lerp(fromRot, toRot, t);
@@ -56,12 +68,25 @@ public class ResultController : SingletonMonoBehaviour<ResultController>
     // Use this for initialization
     void Start()
     {
-        result.SetActive(false);
+        renderers = GetComponentsInChildren<Renderer>();
+        foreach (var r in renderers)
+        {
+            r.SetColor("_Color", ProjectionController.MyColor);
+            r.enabled = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+}
+
+public static class TransformExtention
+{
+    public static void SetPos(this Transform target, Transform toPos)
+    {
+        target.SetPositionAndRotation(toPos.position, toPos.rotation);
     }
 }

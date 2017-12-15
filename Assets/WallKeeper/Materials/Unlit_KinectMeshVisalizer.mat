@@ -22,4 +22,5 @@ Material:
     - _EdgeThreshold: 0.25
     - _Tilt: 0.4
     - _WireWidth: 1
-    m_Colors: []
+    m_Colors:
+    - _Color: {r: 0.12316176, g: 0.59287536, b: 0.9852941, a: 1}

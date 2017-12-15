@@ -190,6 +190,7 @@ public class KinectController : MonoBehaviour
         if (meshVisalizer == null)
             return;
 
+        meshVisalizer.SetColor("_Color", ProjectionController.MyColor);
         meshVisalizer.SetTexture("_BodyIdxTex", bodyIndexTex);
         meshVisalizer.SetBuffer("_VertexData", vertexBuffer);
         meshVisalizer.SetBuffer("_AtackPoints", atackPointBuffer);
