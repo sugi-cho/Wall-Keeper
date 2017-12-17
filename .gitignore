@@ -32,5 +32,3 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Assets/WallKeeper/Audios/
-Assets/WallKeeper/StartVideo/
