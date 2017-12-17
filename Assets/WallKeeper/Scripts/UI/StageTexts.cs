@@ -6,7 +6,7 @@ using sugi.cc;
 
 public class StageTexts : RendererBehaviour
 {
-
+    public Color baseColor;
     public GameObject[] stageTitleModels;
     public GameObject startTextModel;
     public GameObject finishTextModel;
@@ -47,7 +47,7 @@ public class StageTexts : RendererBehaviour
     private void Start()
     {
         foreach (var r in renderers)
-            r.SetColor("_Color", ProjectionController.MyColor);
+            r.SetColor("_Color", baseColor);
         foreach (var go in stageTitleModels)
             go.SetActive(false);
         startTextModel.SetActive(false);

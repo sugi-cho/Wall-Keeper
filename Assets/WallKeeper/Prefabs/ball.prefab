@@ -224,9 +224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaf20ff73ff2fe4b9dc7aa069208841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreTrigger: 0
   minSpeed: 1
-  rigidbody: {fileID: 0}
-  collider: {fileID: 0}
+  isLeft: 0
 --- !u!135 &135928483289867848
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -237,5 +237,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.122829996
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}

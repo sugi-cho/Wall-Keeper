@@ -45,9 +45,8 @@ public class CountTexts : RendererBehaviour {
 
     private void Start()
     {
-        color = ProjectionController.MyColor;
         foreach (var r in renderers)
-            r.SetColor("_Color", ProjectionController.MyColor);
+            r.SetColor("_Color", color);
         foreach (var n in numberModels)
             n.SetActive(false);
     }

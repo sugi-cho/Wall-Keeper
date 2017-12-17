@@ -4,9 +4,11 @@ using System.Linq;
 using UnityEngine;
 
 using sugi.cc;
+using Osc;
 
 public class AudioController : SingletonMonoBehaviour<AudioController>
 {
+    bool IsLeft { get { return GameController.Instance.setting.isLeft; } }
 
     public AudioClip bgm;
 
@@ -22,36 +24,61 @@ public class AudioController : SingletonMonoBehaviour<AudioController>
     public Setting setting;
 
     public int seLimit = 8;
-    List<AudioSource> sePlayers;
+    List<AudioSource> sePlayersL;
+    List<AudioSource> sePlayersR;
 
     AudioSource bgmSource;
 
-    public void OnBodyHit()
+    public void OnBodyHit(bool isLeft = true)
     {
-        PlaySE(bodyHit);
+        if (IsLeft)
+            PlaySE(bodyHit, isLeft);
+        else
+            PlayRemoteSE("bodyHit");
     }
-    public void OnWallHit()
+    public void OnWallHit(bool isLeft = true)
     {
-        PlaySE(wallHit);
+        if (IsLeft)
+            PlaySE(wallHit, IsLeft);
+        else
+            PlayRemoteSE("wallHit");
     }
-    public void OnWallBreak()
+    public void OnWallBreak(bool isLeft = true)
     {
-        PlaySE(wallBreak);
+        if (IsLeft)
+            PlaySE(wallBreak);
+        else
+            PlayRemoteSE("wallBreak");
+    }
+    public void OnPassThrogh()
+    {
+        if (IsLeft)
+            AudioSource.PlayClipAtPoint(passThrough, Vector3.zero);
+        else
+            PlayRemoteSE("passThrough");
     }
     public void OnCountFive()
     {
-        PlaySE(countFive);
+        if (IsLeft)
+            AudioSource.PlayClipAtPoint(countFive, Vector3.zero);
     }
     public void OnCountTen()
     {
-        PlaySE(countTen);
+        if (IsLeft)
+            AudioSource.PlayClipAtPoint(countTen, Vector3.zero);
     }
 
-    void PlaySE(AudioClip clip)
+    void PlayRemoteSE(string seName)
+    {
+        var osc = new MessageEncoder("/se/" + seName);
+        OscController.Instance.Send(osc);
+    }
+    public void PlaySE(AudioClip clip, bool isLeft = true)
     {
         if (clip == null)
             return;
-        var player = sePlayers.Where(ap => !ap.isPlaying).FirstOrDefault();
+        var players = isLeft ? sePlayersL : sePlayersR;
+        var player = players.Where(ap => !ap.isPlaying).FirstOrDefault();
         if (player != null)
         {
             player.clip = clip;
@@ -72,12 +99,12 @@ public class AudioController : SingletonMonoBehaviour<AudioController>
 
         bgmSource = gameObject.AddComponent<AudioSource>();
         bgmSource.playOnAwake = false;
-        bgmSource.spatialBlend = -1f;
+        bgmSource.spatialBlend = 0f;
         bgmSource.panStereo = 1f;
         bgmSource.volume = setting.bgmVolume;
         bgmSource.clip = bgm;
 
-        sePlayers = new List<AudioSource>();
+        sePlayersL = new List<AudioSource>();
         for (var i = 0; i < seLimit; i++)
         {
             var audio = gameObject.AddComponent<AudioSource>();
@@ -85,7 +112,18 @@ public class AudioController : SingletonMonoBehaviour<AudioController>
             audio.spatialBlend = 0f;
             audio.playOnAwake = false;
             audio.volume = setting.seVolume;
-            sePlayers.Add(audio);
+            sePlayersL.Add(audio);
+        }
+
+        sePlayersR = new List<AudioSource>();
+        for (var i = 0; i < seLimit; i++)
+        {
+            var audio = gameObject.AddComponent<AudioSource>();
+            audio.panStereo = 1f;
+            audio.spatialBlend = 0f;
+            audio.playOnAwake = false;
+            audio.volume = setting.seVolume;
+            sePlayersR.Add(audio);
         }
     }
 

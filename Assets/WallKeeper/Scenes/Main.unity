@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &38949233
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -257,6 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &43039773
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -288,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &43474091
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -319,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &56970935
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -350,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &61591115
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -381,6 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &63973759
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -443,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &101313400
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -539,6 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &112862680
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -570,6 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &115146340
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -584,6 +593,65 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300100, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
+--- !u!1 &116272341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 116272342}
+  - component: {fileID: 116272343}
+  m_Layer: 0
+  m_Name: End_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &116272342
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 116272341}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1037279806}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &116272343
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 116272341}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 9c98919b8b8341242b908637a2164684, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera: {fileID: 1654043412}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 1
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: file://D:/Documents/Repos/SportsDesign.Camp-TeamA/Assets/StreamingAssets/SDC_OP_L.avi
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!1 &119354196 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100110, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -601,6 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &119354201
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -615,6 +684,34 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300062, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
+--- !u!1 &124498720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 124498721}
+  m_Layer: 0
+  m_Name: StackPosL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &124498721
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124498720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.4, y: -1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1520566676}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130929934 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100116, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -632,6 +729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &130929939
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -663,6 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &148299065
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -716,6 +815,10 @@ MonoBehaviour:
   teamObjR: {fileID: 548158852}
   centerPosL: {fileID: 2032063368}
   centerPosR: {fileID: 1373470900}
+  kinectVis: {fileID: 2100000, guid: d8b953306221d5640ac36c561a68903c, type: 2}
+  fader:
+    fadeRenderer: {fileID: 1417210526}
+    fadeVal: 0
   floorObj: {fileID: 2061177644}
   remainNumWalls: 0
   myScores: 
@@ -726,6 +829,21 @@ MonoBehaviour:
   - {fileID: 305655493}
   currentWallList: []
   maxBallSpeed: 3
+  gameAudio:
+    titleStartSe: {fileID: 8300000, guid: 62de3ee93a0acb94881df78acd1e8d3f, type: 3}
+    firstStage: {fileID: 8300000, guid: bbe85f02fc73d9e4e9317926d52b9fed, type: 3}
+    secondStage: {fileID: 8300000, guid: 9da469411350efa4b90e722e414dacc7, type: 3}
+    finalStage: {fileID: 8300000, guid: 31d3e994dd1aacd4b8232e0de257e390, type: 3}
+    start: {fileID: 8300000, guid: 8a85711533c96aa488c2ab977773c084, type: 3}
+    countFive: {fileID: 8300000, guid: 65bf0b87a6d39ef4286cbb47868fd239, type: 3}
+    finish: {fileID: 8300000, guid: e1ec57a6ff7e36c4a8250b6237a9cde0, type: 3}
+    wallKeeper: {fileID: 8300000, guid: 1c972e4e50ff6ef4295d86dfd5e06e3d, type: 3}
+    winnerIs: {fileID: 8300000, guid: 337d337bd3097ce4fa4b28169fbf9c92, type: 3}
+    team_blue: {fileID: 8300000, guid: 7b0ab07936636534ab94a6a03510d5b6, type: 3}
+    team_red: {fileID: 8300000, guid: 5ab5ef10635a28341b26dccff1106bc9, type: 3}
+    endingSe: {fileID: 8300000, guid: f5e6da6005b441a4283ee8a8815dd90a, type: 3}
+    audioPlayer: {fileID: 1185574753}
+  wallCountSound: {fileID: 1771143573}
 --- !u!4 &160231220
 Transform:
   m_ObjectHideFlags: 0
@@ -738,6 +856,9 @@ Transform:
   m_Children:
   - {fileID: 1385029764}
   - {fileID: 1028155609}
+  - {fileID: 1417210528}
+  - {fileID: 1771143574}
+  - {fileID: 1185574754}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -758,6 +879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &164983568
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -789,6 +911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &172217861
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -820,6 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &176301367
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -891,6 +1015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 0
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &216483925 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100042, guid: 40e0d2768690313409ed09748c619b44, type: 3}
@@ -908,6 +1034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &216483930
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -939,6 +1066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &222356151
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -970,6 +1098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &225582792
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1001,6 +1130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &234880053
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1032,6 +1162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &243271888
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1131,6 +1262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &247658978
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1217,6 +1349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &251415051
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1317,7 +1450,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1434,6 +1567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 1
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &260756364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &278660843
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1573,6 +1709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &286457152
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1604,6 +1741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &291652889
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1635,6 +1773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &305465326
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1670,6 +1809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &313403432
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1770,7 +1910,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1814,6 +1954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &325082849
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1845,7 +1986,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: afbe9faea54a53e4d9cc071839390b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: afbe9faea54a53e4d9cc071839390b8e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1875,6 +2016,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: afbe9faea54a53e4d9cc071839390b8e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: afbe9faea54a53e4d9cc071839390b8e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: afbe9faea54a53e4d9cc071839390b8e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: afbe9faea54a53e4d9cc071839390b8e, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: afbe9faea54a53e4d9cc071839390b8e, type: 3}
@@ -1900,6 +2053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &327514190
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2000,7 +2154,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2072,7 +2226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777163d5b4f303749885a91f9b5a6cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
   isCounting: 0
   numberModels:
   - {fileID: 1908865033}
@@ -2102,11 +2256,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 331748909}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.32, y: 0, z: 0}
+  m_LocalPosition: {x: 3.32, y: -0.5, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1520566676}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339437377 stripped
 GameObject:
@@ -2159,6 +2313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &360859970
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2259,7 +2414,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2303,6 +2458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &371670302
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2334,6 +2490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &378838609
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2438,11 +2595,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 405359282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.68, y: 0, z: 0}
+  m_LocalPosition: {x: -3.4, y: -0.5, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1520566676}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435347407
 GameObject:
@@ -2530,7 +2687,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2615,6 +2772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &455827905
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2646,6 +2804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &457823023
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2677,6 +2836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &463289229
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2708,6 +2868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &490469173
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2739,6 +2900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &494955932
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2770,6 +2932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &495318075
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2801,6 +2964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &495817216
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2832,6 +2996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &498172396
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2863,6 +3028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &500971138
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2894,6 +3060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &508331643
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2925,6 +3092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &514769360
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2963,7 +3131,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 524727901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 1282659698}
@@ -3030,6 +3198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &525998309
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3060,6 +3229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 1
+  useOverrideColor: 0
+  color: {r: 0.375, g: 0, b: 0.24051726, a: 0}
 --- !u!1 &551072660 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100086, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -3077,6 +3248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &551072665
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3091,6 +3263,65 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300096, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
+--- !u!1 &562242372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 562242373}
+  - component: {fileID: 562242374}
+  m_Layer: 0
+  m_Name: End_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &562242373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562242372}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1037279806}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &562242374
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562242372}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 1c917232d91223848a3cdab664a8c6d9, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera: {fileID: 1805697821}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 1
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!1 &566870531 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100012, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -3108,6 +3339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &566870536
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3208,7 +3440,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3252,6 +3484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &582284581
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3352,7 +3585,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3395,6 +3628,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 1
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &614876872 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100024, guid: 40e0d2768690313409ed09748c619b44, type: 3}
@@ -3412,6 +3647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &614876877
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3480,7 +3716,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -3502,6 +3738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &632700418
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3533,6 +3770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &633551963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3564,6 +3802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &662335618
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3595,6 +3834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &663694590
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3626,6 +3866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &663888151
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3640,6 +3881,34 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300150, guid: 40e0d2768690313409ed09748c619b44, type: 3}
+--- !u!1 &670688507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 670688508}
+  m_Layer: 0
+  m_Name: R_LookUpWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &670688508
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 670688507}
+  m_LocalRotation: {x: 0.06975647, y: 0, z: 0, w: 0.9975641}
+  m_LocalPosition: {x: 3.367, y: 2, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1520566676}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 8, y: 0, z: 0}
 --- !u!1 &672185186 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100040, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -3657,6 +3926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &672185191
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3688,6 +3958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &673708757
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3749,7 +4020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.47794116, b: 0.74797165, a: 0.76862746}
+  m_Color: {r: 1, g: 0.86551726, b: 0.9350773, a: 0.76862746}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3787,6 +4058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &730978495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3881,6 +4153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &758608379
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3912,6 +4185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &775957735
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4017,6 +4291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &788074727
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4111,6 +4386,7 @@ MonoBehaviour:
     - time: 23
       deltaFromCenter: {x: 0, y: 0, z: 0}
       isRand: 1
+  ballScale: 0.15
 --- !u!1 &800364919 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100102, guid: 40e0d2768690313409ed09748c619b44, type: 3}
@@ -4128,6 +4404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &800364924
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4158,6 +4435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 0
+  useOverrideColor: 0
+  color: {r: 0, g: 0.24568965, b: 0.41911763, a: 0.547}
 --- !u!1 &802254016 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100212, guid: 40e0d2768690313409ed09748c619b44, type: 3}
@@ -4175,6 +4454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &802254021
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4206,6 +4486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &802925291
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4237,6 +4518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &808237640
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4268,6 +4550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &816276867
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4367,6 +4650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &822974215
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4398,6 +4682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &826927488
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4457,6 +4742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &837827318
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4488,6 +4774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &843200990
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4502,6 +4789,34 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300036, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
+--- !u!1 &850794202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 850794203}
+  m_Layer: 0
+  m_Name: L_LookUpWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &850794203
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 850794202}
+  m_LocalRotation: {x: 0.06975647, y: 0, z: 0, w: 0.9975641}
+  m_LocalPosition: {x: -3.45, y: 2, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1520566676}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 8, y: 0, z: 0}
 --- !u!1 &850859600 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100216, guid: 40e0d2768690313409ed09748c619b44, type: 3}
@@ -4519,6 +4834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &850859605
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4550,6 +4866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &851021260
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4581,6 +4898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &854038714
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4646,6 +4964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &858449275
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4744,7 +5063,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -4766,6 +5085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &906949744
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4797,6 +5117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &909069717
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4828,6 +5149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &910354912
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4859,6 +5181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &919208157
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4890,6 +5213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &922851152
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4921,6 +5245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &922884575
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4952,6 +5277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &925216192
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4983,6 +5309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &940206150
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5014,6 +5341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &946749474
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5100,6 +5428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &974709648
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5205,6 +5534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &976691418
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5236,6 +5566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &979010041
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5267,6 +5598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &982427294
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5298,6 +5630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &985243579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5397,6 +5730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &992487125
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5497,7 +5831,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5579,6 +5913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1016802714
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5610,6 +5945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1018180273
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5641,6 +5977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1021590421
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5672,6 +6009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1028018812
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5748,7 +6086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037279806}
   m_Layer: 0
-  m_Name: StartVideo
+  m_Name: Videos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5766,8 +6104,38 @@ Transform:
   m_Children:
   - {fileID: 869022808}
   - {fileID: 622626190}
+  - {fileID: 116272342}
+  - {fileID: 562242373}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1050262375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1050262376}
+  m_Layer: 0
+  m_Name: StackPosR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1050262376
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1050262375}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.32, y: -1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1520566676}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1050342599 stripped
 GameObject:
@@ -5786,6 +6154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1050342604
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5817,6 +6186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1051368712
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5848,6 +6218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1053125569
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5948,7 +6319,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5992,6 +6363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1066992662
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6023,6 +6395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1076946590
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6054,6 +6427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1077100472
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6159,6 +6533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1090159225
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6190,6 +6565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1094704202
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6221,6 +6597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1101291329
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6252,6 +6629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1124359426
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6283,6 +6661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1125242252
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6314,6 +6693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1134519184
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6345,6 +6725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1145784293
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6376,6 +6757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1150311062
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6407,6 +6789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1171933292
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6438,6 +6821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1175661075
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6469,6 +6853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1181195374
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6483,6 +6868,115 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300070, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
+--- !u!1 &1185574752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1185574754}
+  - component: {fileID: 1185574753}
+  m_Layer: 0
+  m_Name: OneShotAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1185574753
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185574752}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dcdd9fc9bfdbcb749b1fbd7033dfcecf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1185574754
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185574752}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 160231220}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187807310 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100120, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -6500,6 +6994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1187807315
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6531,7 +7026,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 592042a8bf335ed4699adaec98c47395, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 592042a8bf335ed4699adaec98c47395, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6561,6 +7056,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 592042a8bf335ed4699adaec98c47395, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 592042a8bf335ed4699adaec98c47395, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 592042a8bf335ed4699adaec98c47395, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 592042a8bf335ed4699adaec98c47395, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 592042a8bf335ed4699adaec98c47395, type: 3}
@@ -6586,6 +7093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1191474364
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6685,6 +7193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1196834051
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6757,6 +7266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1212639638
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6885,6 +7395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1219393297
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6916,6 +7427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1220381504
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6947,6 +7459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1230387150
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6978,6 +7491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1232578291
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7009,6 +7523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1244908480
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7047,7 +7562,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1257176282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 1282659698}
@@ -7114,6 +7629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1262806476
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7214,7 +7730,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7258,6 +7774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1276086393
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7317,6 +7834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f26139e6780784e82ea94c8185cd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseColor: {r: 0.86764705, g: 0.86764705, b: 0.86764705, a: 0.634}
   stageTitleModels:
   - {fileID: 1257176282}
   - {fileID: 524727901}
@@ -7340,6 +7858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1294387288
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7370,6 +7889,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 0
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1295933004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7392,13 +7913,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1295933004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 750086321}
   - {fileID: 1476376700}
   m_Father: {fileID: 1520566676}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303348559 stripped
 GameObject:
@@ -7416,6 +7937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 1
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1322133842 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100076, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -7433,6 +7956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1322133847
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7464,6 +7988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1328082910
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7564,7 +8089,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7608,6 +8133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1338308893
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7639,6 +8165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1339690167
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7686,7 +8213,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 384, y: 384}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1341565016
 MonoBehaviour:
@@ -7700,7 +8227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.44852942, g: 0.7261664, b: 1, a: 0.76862746}
+  m_Color: {r: 0.80344826, g: 0.9024019, b: 1, a: 0.76862746}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7738,6 +8265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1349954578
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7769,6 +8297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1350523056
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7800,6 +8329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1351984855
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7831,6 +8361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1355527426
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7862,6 +8393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1360651151
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7900,7 +8432,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1366817548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 1282659698}
@@ -7967,6 +8499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1366825805
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8094,6 +8627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1382428777
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8125,6 +8659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1384871980
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8279,6 +8814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1391035639
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8310,6 +8846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1392793057
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8341,6 +8878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1401296968
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8372,6 +8910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1405793509
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8472,7 +9011,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8499,6 +9038,77 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1416952717}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1417210525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1417210528}
+  - component: {fileID: 1417210527}
+  - component: {fileID: 1417210526}
+  m_Layer: 0
+  m_Name: Fader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1417210526
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417210525}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4c609613a3a139144b91a95e0ee9adff, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1417210527
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417210525}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1417210528
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417210525}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 160231220}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1432244043 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100034, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -8516,6 +9126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1432244048
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8547,6 +9158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1439386478
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8578,6 +9190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1440489207
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8609,6 +9222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1453816759
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8640,6 +9254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1457453561
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8671,6 +9286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1458500920
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8812,7 +9428,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8856,6 +9472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1473095498
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8941,6 +9558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 0
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &1488491796
 Prefab:
   m_ObjectHideFlags: 0
@@ -9088,6 +9707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1492274282
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9119,6 +9739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1498604233
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9165,9 +9786,13 @@ Transform:
   m_Children:
   - {fileID: 826977163}
   - {fileID: 260756365}
+  - {fileID: 850794203}
+  - {fileID: 670688508}
   - {fileID: 1295933005}
   - {fileID: 405359283}
   - {fileID: 331748910}
+  - {fileID: 124498721}
+  - {fileID: 1050262376}
   m_Father: {fileID: 1872481713}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9186,8 +9811,12 @@ MonoBehaviour:
   loseObj: {fileID: 1514648144}
   resultCamPosL: {fileID: 826977163}
   resultCamPosR: {fileID: 260756365}
+  lookupWallL: {fileID: 850794203}
+  lookupWallR: {fileID: 670688508}
   resultObjPosL: {fileID: 405359283}
   resultObjPosR: {fileID: 331748910}
+  wallStackPosL: {fileID: 124498721}
+  wallStackPosR: {fileID: 1050262376}
   cameraMoveDuration: 1
 --- !u!1 &1522444151 stripped
 GameObject:
@@ -9206,6 +9835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1522444156
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9237,6 +9867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1524215253
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9268,6 +9899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1531511640
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9299,6 +9931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1539513963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9330,6 +9963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1542604469
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9402,6 +10036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1553556403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9433,6 +10068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1562687302
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9493,6 +10129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1579153233
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9524,6 +10161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1579184034
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9623,6 +10261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1590394489
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9654,6 +10293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1617126386
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9684,6 +10324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 1
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1625976920 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100018, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -9700,6 +10342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 0
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1627595039 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100054, guid: 40e0d2768690313409ed09748c619b44, type: 3}
@@ -9717,6 +10361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1627595044
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9748,6 +10393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1629201829
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9779,6 +10425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1634272813
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9878,6 +10525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1647611655
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9901,6 +10549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1654043413}
   - component: {fileID: 1654043412}
+  - component: {fileID: 1654043410}
   m_Layer: 0
   m_Name: LeftCamera
   m_TagString: MainCamera
@@ -9908,6 +10557,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1654043410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654043409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: fa7218e1202df4242a16b6b69d900263, type: 2}
 --- !u!20 &1654043412
 Camera:
   m_ObjectHideFlags: 0
@@ -9973,6 +10634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1654563077
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10004,6 +10666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1654601307
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10035,6 +10698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1667871735
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10066,6 +10730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1678303882
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10166,7 +10831,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10210,6 +10875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1700518817
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10241,6 +10907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1707229340
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10272,6 +10939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1707508274
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10303,6 +10971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1714865181
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10403,7 +11072,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10447,6 +11116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1739527561
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10478,6 +11148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1743165669
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10509,6 +11180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1744761859
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10540,6 +11212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1745120049
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10558,6 +11231,115 @@ MeshCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: e93c7eb1021b064468d8ad78864ce1c6, type: 3}
   m_PrefabInternal: {fileID: 750086320}
+--- !u!1 &1771143572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1771143574}
+  - component: {fileID: 1771143573}
+  m_Layer: 0
+  m_Name: LoopAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1771143573
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771143572}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dcdd9fc9bfdbcb749b1fbd7033dfcecf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1771143574
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771143572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 160231220}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792654626 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100066, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -10575,6 +11357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1792654631
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10606,6 +11389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1799833997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10637,6 +11421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1801779779
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10668,6 +11453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1805353347
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10691,6 +11477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805697822}
   - component: {fileID: 1805697821}
+  - component: {fileID: 1805697823}
   m_Layer: 0
   m_Name: RightCamera
   m_TagString: MainCamera
@@ -10746,6 +11533,18 @@ Transform:
   m_Father: {fileID: 1009124706}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1805697823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1805697820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: fa7218e1202df4242a16b6b69d900263, type: 2}
 --- !u!1 &1819552002 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100074, guid: 9246a2e0ea2d523488839efccd99f1d7, type: 3}
@@ -10763,6 +11562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1819552007
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10863,7 +11663,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10907,6 +11707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1824086813
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10938,6 +11739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1831991821
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10969,6 +11771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1833336024
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11000,6 +11803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1837872931
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11031,6 +11835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1843127292
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11062,6 +11867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1847955272
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11093,6 +11899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1858176547
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11124,6 +11931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1864899290
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11279,7 +12087,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11323,6 +12131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1867519483
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11354,6 +12163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1868817481
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11434,6 +12244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1874592293
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11465,6 +12276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1876375304
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11496,6 +12308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1891404851
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11527,6 +12340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1907597582
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11632,6 +12446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1926579495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11663,6 +12478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1955754707
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11694,6 +12510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1958622630
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11725,6 +12542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1960159162
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11756,6 +12574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1961262143
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11787,6 +12606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1961951607
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11818,6 +12638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1968798062
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11849,6 +12670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &1989835308
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11906,6 +12728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 0
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &1990653018
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11964,6 +12788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &1999075268
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11995,6 +12820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2006186265
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12026,6 +12852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &2009817542
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12057,6 +12884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &2011937090
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12088,6 +12916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2021080748
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12215,6 +13044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2032223782
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12246,6 +13076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2037921572
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12364,6 +13195,8 @@ MonoBehaviour:
   faderR: {fileID: 385989303}
   videoL: {fileID: 869022809}
   videoR: {fileID: 622626191}
+  endL: {fileID: 116272343}
+  endR: {fileID: 562242374}
   colorL: {r: 0.12316176, g: 0.59287536, b: 0.9852941, a: 1}
   colorR: {r: 1, g: 0.14814016, b: 0.45034605, a: 1}
 --- !u!4 &2070191931
@@ -12393,7 +13226,7 @@ MonoBehaviour:
   bgm: {fileID: 8300000, guid: d47053ea74822f44b94ba5ab4df04421, type: 3}
   bodyHit: {fileID: 8300000, guid: 7d5534d84eabf56458b630106588c75d, type: 3}
   wallHit: {fileID: 8300000, guid: 1a27974c138187745875e2397d9d7ba2, type: 3}
-  wallBreak: {fileID: 8300000, guid: 1a27974c138187745875e2397d9d7ba2, type: 3}
+  wallBreak: {fileID: 8300000, guid: 5dfb2aa57ec52c64497cb3c329b66401, type: 3}
   countFive: {fileID: 8300000, guid: 8bed29c91ab43a846add080951c11bd9, type: 3}
   countTen: {fileID: 8300000, guid: 323001b889850954f93f506758b17956, type: 3}
   countWalls: {fileID: 8300000, guid: dcdd9fc9bfdbcb749b1fbd7033dfcecf, type: 3}
@@ -12592,7 +13425,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4bf1c73a0de8ba24b959588295f1a5af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12636,6 +13469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2088215621
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12693,6 +13527,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   side: 1
+  useOverrideColor: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &2089169701
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12751,6 +13587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2091087727
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12782,6 +13619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2092779833
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12955,6 +13793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &2102294548
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12986,6 +13825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &2113402307
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13017,6 +13857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2119083698
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13048,6 +13889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &2120532975
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13366,6 +14208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 0
+  endGame: 0
 --- !u!64 &2139531461
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13397,6 +14240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &2140797260
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13428,6 +14272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   side: 1
+  endGame: 0
 --- !u!64 &2142315814
 MeshCollider:
   m_ObjectHideFlags: 0

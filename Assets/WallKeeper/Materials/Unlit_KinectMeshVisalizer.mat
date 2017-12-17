@@ -19,6 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
+    - _Amount: 0.9940726
     - _EdgeThreshold: 0.25
     - _Tilt: 0.4
     - _WireWidth: 1

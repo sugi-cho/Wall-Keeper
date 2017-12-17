@@ -14,11 +14,14 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
 
     GameController gameController { get { return GameController.Instance; } }
     OscController oscController { get { return OscController.Instance; } }
+    AudioController audioController { get { return AudioController.Instance; } }
 
     public Image faderL;
     public Image faderR;
     public VideoPlayer videoL;
     public VideoPlayer videoR;
+    public VideoPlayer endL;
+    public VideoPlayer endR;
     public Color colorL = Color.blue;
     public Color colorR = Color.red;
     Image fader
@@ -37,8 +40,10 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
             else return videoR;
         }
     }
+    VideoPlayer endVideo { get { return isLeft ? endL : endR; } }
 
     bool started;
+    bool ended;
 
     [Osc("/start")]
     public void ShowTitle(object[] data = null)
@@ -47,10 +52,22 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
             return;
 
         video.Play();
+        gameController.gameAudio.Play(gameController.gameAudio.titleStartSe);
+        this.CallMethodDelayed(6.9f, () => gameController.gameAudio.Play(gameController.gameAudio.wallKeeper));
         AudioController.Instance.PlayBGM();
         StartCoroutine(FadeVideoRoutine(1f, 1f));
         this.Invoke(StartGame, 9f);
         started = true;
+    }
+    [Osc("/end")]
+    public void EndVideo(object[] data = null)
+    {
+        if (ended)
+            return;
+        endVideo.targetCameraAlpha = 1f;
+        gameController.gameAudio.Play(gameController.gameAudio.endingSe);
+        endVideo.Play();
+        ended = true;
     }
     IEnumerator FadeVideoRoutine(float to, float duration, System.Action callback = null)
     {
@@ -90,8 +107,27 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
         var pos = new Vector3((float)data[0], (float)data[1], (float)data[2]);
         var vel = new Vector3((float)data[3], (float)data[4], (float)data[5]);
         var hitCount = (int)data[6];
-        var isLeft = (int)data[7] == 1;
-        BallController.Instance.TransferBall(pos, vel, hitCount, isLeft);
+        BallController.Instance.TransferBall(pos, vel, hitCount);
+    }
+    [Osc("/se/bodyHit")]
+    public void SeBodyHit(object[] data = null)
+    {
+        audioController.OnBodyHit(false);
+    }
+    [Osc("/se/wallHit")]
+    public void SeWallHit(object[] data)
+    {
+        audioController.OnWallHit(false);
+    }
+    [Osc("/se/wallBreak")]
+    public void SeWallBreak(object[] data)
+    {
+        audioController.OnWallBreak(false);
+    }
+    [Osc("/se/passThrough")]
+    public void SePassThrough(object[] data)
+    {
+        audioController.OnPassThrogh();
     }
 
     // Use this for initialization
@@ -100,6 +136,9 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
         video.targetCameraAlpha = 0f;
         video.Play();
         video.Pause();
+        endVideo.targetCameraAlpha = 0f;
+        endVideo.Play();
+        endVideo.Pause();
         oscController.AddCallbacks(this);
     }
 
@@ -111,6 +150,8 @@ public class ProjectionController : SingletonMonoBehaviour<ProjectionController>
             ShowTitle();
             SendStartOsc();
         }
+        if (Input.GetKeyDown(KeyCode.A))
+            EndVideo();
     }
 
     void SendStartOsc()

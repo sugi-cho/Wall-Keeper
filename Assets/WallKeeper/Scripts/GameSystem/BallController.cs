@@ -11,15 +11,17 @@ public class BallController : SingletonMonoBehaviour<BallController>
     public Ball ballPrefab;
     public List<Ball> ballList;
     public AddBallTimeLine[] addBallTimelines;
+    public float ballScale = 1f;
 
-    public void TransferBall(Vector3 pos, Vector3 vel,int hitCount, bool isLeft)
+    public void TransferBall(Vector3 pos, Vector3 vel, int hitCount)
     {
         var newBall = Instantiate(ballPrefab);
+        newBall.transform.localScale = ballScale * Vector3.one;
         newBall.rigidbody.position = pos;
         newBall.rigidbody.velocity = vel;
         newBall.SetHitCount(hitCount);
-        newBall.isLeft = isLeft;
         newBall.ignoreTrigger = true;
+        ballList.Add(newBall);
     }
     public void AddBallWithTimeLine(int idx)
     {
@@ -30,28 +32,25 @@ public class BallController : SingletonMonoBehaviour<BallController>
         var newBall = Instantiate(ballPrefab);
         newBall.transform.position = pos;
         newBall.transform.SetParent(transform);
-        newBall.isLeft = GameController.Instance.setting.isLeft;
         StartCoroutine(BallInRroutine(newBall, duration));
         ballList.Add(newBall);
     }
     IEnumerator BallInRroutine(Ball ball, float duration)
     {
-        ball.collider.enabled = false;
-        ball.rigidbody.isKinematic = true;
         var pos = ball.transform.localPosition;
-        var fromY = duration * 10f;
+        pos.y = 0f;
+        ball.transform.localPosition = pos;
         var t = 0f;
         while (t < 1f)
         {
-            pos.y = Mathf.Lerp(fromY, 0, t);
-            ball.transform.localPosition = pos;
+            ball.transform.localScale = t * ballScale * Vector3.one;
             yield return t += Time.deltaTime / duration;
         }
-        pos.y = 0f;
-        ball.collider.enabled = true;
-        ball.rigidbody.isKinematic = false;
-        yield return new WaitForSeconds(1f);
-        ball.rigidbody.velocity = Random.onUnitSphere;
+        yield return new WaitForSeconds(2.0f);
+        var vel = Random.onUnitSphere;
+        vel.y = 0;
+        vel = vel.normalized * GameController.Instance.maxBallSpeed * 0.5f;
+        ball.rigidbody.velocity = vel;
     }
     public void RemoveBall(Ball b)
     {
