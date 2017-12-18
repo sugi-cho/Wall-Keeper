@@ -1,5 +1,29 @@
-# SportsDesign.Camp-TeamA
-this remository is for the workshop. https://sportsdesign.camp/
+# Wall Keeper
+
+[SportsDesign.Camp](https://sportsdesign.camp/) TEAM A
+
+## Description
+
+This repository was created for a specific performance, which was an interactive visual show, suggesting a new type of sport that utilized sensing and real-time rendering technologies in relation to new media art.
+
+## Member
+
+### Yuya Imaeda
+
+### Iori Iwaki
+
+### Marie Iwasaki
+
+### Nozomi Okada
+
+### Hironori Sugino
+
+- [sugi.cc](http://sugi.cc)
+- programming (Unity)
+
+### Yuma Yanagisawa
+
+- [Computation | Art](https://yumayanagisawa.com/)
 
 ## About BGM
 
