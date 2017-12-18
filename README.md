@@ -13,6 +13,7 @@ This repository was created for a specific performance, which was an interactive
 ### Yuya Imaeda
 
 - passion (live condition)
+- many ideas
 
 ### Iori Iwaki ([url](https://vimeo.com/ioriiwaki))
 
