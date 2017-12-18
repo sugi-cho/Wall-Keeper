@@ -1,6 +1,6 @@
 # Wall Keeper
 
-[SportsDesign.Camp](https://sportsdesign.camp/) TEAM A
+Panasonic presents [SportsDesign.Camp](https://sportsdesign.camp/) TEAM A
 
 ## Description
 
@@ -16,14 +16,11 @@ This repository was created for a specific performance, which was an interactive
 
 ### Nozomi Okada
 
-### Hironori Sugino
+### Hironori Sugino ([url](http://sugi.cc))
 
-- [sugi.cc](http://sugi.cc)
 - programming (Unity)
 
-### Yuma Yanagisawa
-
-- [Computation | Art](https://yumayanagisawa.com/)
+### Yuma Yanagisawa ([url](https://yumayanagisawa.com/))
 
 ## About BGM
 
