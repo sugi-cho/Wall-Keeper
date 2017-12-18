@@ -22,6 +22,7 @@ This repository was created for a specific performance, which was an interactive
 ### Marie Iwasaki
 
 - direction
+- voice actress
 
 ### Nozomi Okada
 
