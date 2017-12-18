@@ -2,6 +2,8 @@
 
 Panasonic presents [SportsDesign.Camp](https://sportsdesign.camp/) TEAM A
 
+![](Imgs/projection.jpg)
+
 ## Description
 
 This repository was created for a specific performance, which was an interactive visual show, suggesting a new type of sport that utilized sensing and real-time rendering technologies in relation to new media art.
