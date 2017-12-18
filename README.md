@@ -10,17 +10,28 @@ This repository was created for a specific performance, which was an interactive
 
 ### Yuya Imaeda
 
-### Iori Iwaki
+- passion (live condition)
+
+### Iori Iwaki ([url](https://vimeo.com/ioriiwaki))
+
+- visual design (AE + C4D)
 
 ### Marie Iwasaki
 
+- direction
+
 ### Nozomi Okada
+
+- motion typography (opening Logo & ending)
+- typography design
 
 ### Hironori Sugino ([url](http://sugi.cc))
 
 - programming (Unity)
 
 ### Yuma Yanagisawa ([url](https://yumayanagisawa.com/))
+
+- sound design
 
 ## About BGM
 
